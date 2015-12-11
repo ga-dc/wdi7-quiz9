@@ -126,11 +126,3 @@ Describe some of the common git workflows for teams (fork and pull request, etc)
 ```text
 
 ```
-
-### Question #11
-
-What did you like or dislike to the structure of Unit 3 (half days of lessons followed by half days of labs)?
-
-```text
-
-```
