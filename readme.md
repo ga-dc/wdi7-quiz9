@@ -131,7 +131,7 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 
 ```css
 @media (max-width: 40rem) {
-	.columns {
+	.column {
 		width: 10rem;
 	}
 }
