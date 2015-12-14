@@ -71,7 +71,7 @@ console.log(results);
 
 Your Answer:
 ```
-I believe that coed does not actually return anything because there is no promise attached to it after the find.  Once you find the results, there needs to be a ".then" that actually returns the information.
+I believe that code does not actually return anything because there is no promise attached to it after the find.  Once you find the results, there needs to be a ".then" that actually returns the information.
 In addition to that, if there are more than 1 "Bob"'s, it would not know which one you want to specify
 
 ```
@@ -84,7 +84,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```
-Views and models in FE JS are mainly a "separation of concerns" situation.  Models are where I would add AJAX calls to populate the FE.  Views are where I would plan to actually build my page on the HTML and then provide the viewing source for that models' AJAX call.
+Views and models in FE JS are mainly a "separation of concerns" situation.  Models are where I would add AJAX calls to populate the FE with data.  Views are where I would plan to actually build my page on the HTML and then provide the viewing source for that models' AJAX call.
 
 ```
 
