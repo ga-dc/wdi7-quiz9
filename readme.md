@@ -17,7 +17,16 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+$(document).ready(function(){
+  $("h1").on("click", function(){
+    var url = "http://kittengifs.com/gifs"
+    $.ajax({
+      url: url,
+      type: "get"
+      datatype: "JSON"
+    })
+  }
+}
 ```
 
 ### Question #2
@@ -26,7 +35,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-
+By doing requests to the client asynchronously
 ```
 
 
@@ -38,7 +47,7 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
-
+SQL databases have predefined schema whereas NOSQL databases have dynamic schema for unstructured data.
 ```
 
 
@@ -53,8 +62,9 @@ console.log(results);
 ```
 
 Your Answer:
-```text
-
+```js
+var results = AuthorModel.find({name: "Bob"});
+console.log(name)
 ```
 
 ## Front-end OOJS
@@ -65,7 +75,8 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+Views - show an output based on changes in the model.
+Model- Stores data that is commanded from the controller and presented in the view.
 ```
 
 ### Question #6
@@ -81,7 +92,18 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```js
+var Panda = function(name, age) {
+  this.name = name
+  this.age = age;
+  this.eat_bamboo
+  this.num_bamboo_eaten = 0
+
+  var eat_bamboo = function()
+  if(eat_bamboo > 0, eat_bamboo++)
+}else {
+      (eat_bamboo)
+}
 
 ```
 
@@ -94,7 +116,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+OAuth acts as the middle man between your apps password and the password used to through the authentication process. It provides an access token with limited responsibility.
 ```
 
 
@@ -105,7 +127,12 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
-
+body{
+  background: green;
+}
+@media (min-width: 40rem){
+  body{
+    background: yellow;
 ```
 
 ## Git
@@ -116,7 +143,8 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+Merge takes all the changes in one branch and merges them with the master branch
+Rebase - Moves the branch to a new starting point.
 ```
 
 ### Question #10
@@ -124,5 +152,5 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
-
+For teams one person starts the respository and other teams members can fork this repo, git clone it down and make a branch from the master to do their own seperate work to later merge their work back with the master. Pull requests if you are working and want all the new commmits that were pushed to the master branch.
 ```
