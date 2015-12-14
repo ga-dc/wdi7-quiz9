@@ -67,7 +67,7 @@ console.log(results);
 
 Your Answer:
 ```text
-
+The query is missing a callback function as its second argument. Because of the asynchronous nature of mongoose, functions that work with returned mongoose results must be nested inside a callback function, so the console.log(results) would need to be nested inside a callback function in the second argument of AuthorModel.find rather than on a new line outside the var results declaration.
 ```
 
 ## Front-end OOJS
