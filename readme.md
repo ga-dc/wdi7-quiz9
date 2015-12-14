@@ -17,6 +17,9 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
+$.get("http://kittengifs.com/gifs", function(data){
+  console.log(data.length);
+})
 
 ```
 
@@ -26,6 +29,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
+In order to submit a form using jQuery via ajax, we should create a form in html, prevent its default action in a linked js file, and instead use a jQuery post request in order to submit the data.  We may need to encode our data (which is likely a json) in some way, either using a method like JSON.stringigy, or serialization.
 
 ```
 
@@ -38,6 +42,9 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
+SQL databases are not meant to be human-readable, while mongoDB is human-readable.  SQL databases have built in join methods, which make creating and using join tables quite easy.  NoSQL databases do not have built-in joining and were not built with table-joining in mind (although this behavior can be achieved using ObjectIDS).
+
+This means that, for complex relationships (many-to-many) you're probably better off using a SQL DB.  If you're not working with complex relationships between your models, then you are probably okay using mongoDB or another NoSQL DB.
 
 ```
 
@@ -54,7 +61,16 @@ console.log(results);
 
 Your Answer:
 ```text
+Most mongoose methods are asynchronous, so we can only access the results of a query in the callback or by chaining .then.  A correct way to write this would be:
 
+```
+```js
+AuthorModel.find({name: "Bob"}).then(function(docs, err){
+  if (!err) {
+    var results = docs;
+    console.log(results);
+  }
+})
 ```
 
 ## Front-end OOJS
@@ -65,7 +81,9 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
+In front-end js, models mirror a model on the back end and so allow you to access data from your server in order to manipulate it on the front-end.  
 
+The purpose of views is to take the data from our server (now represented in front-end js models) and display it on the front-end, using DOM manipulation.
 ```
 
 ### Question #6
@@ -81,7 +99,10 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```js
+Panda.prototype.eat_bamboo = function(){
+  this.num_bamboo_eaten++;
+}
 
 ```
 
@@ -94,6 +115,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
+OAuth methods involve a user logging in via a third-party site.  That user's credentials are never visible to site that he wants to log in on, rather, he is re-directed to a different site and, upon logging in, returns to the initial site.  So, his password is never available to the site he started on.  However, that site will have access to an OAuth token, which can be thought of as a kind of valet key that grants limited privileges to the holder.
 
 ```
 
@@ -105,6 +127,11 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+@media (max-width: 40rem){
+  .nav {
+    width: auto;
+  }
+}
 
 ```
 
@@ -116,6 +143,11 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
+Rebase and merge are two different options for merging two branches.
+
+Rebase re-writes git history, moving one branch and all its commits onto the end of the branch with which it is being merged.
+
+Merge preserves a more accurate picture of what happened, that is, two separate branches that combine only when the merger occurs.
 
 ```
 
@@ -124,5 +156,18 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+A common git work-flow would be:
+1. checkout development from master
+2. checkout feature branch, add feature
+3. checkout development, merge feature, testing
+4. checkout master, merge development, testing
+5. (re)deployment
+
+Another one might be:
+1. fork repo
+2. checkout personal branch
+3. make changes, add and commit changes
+4. push to origin (personal branch)
+5. open pull request to upstream, probably to development branch
 
 ```
