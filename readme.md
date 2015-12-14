@@ -39,7 +39,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-
+jQuery grabs the values from the form and they are packaged into a front-end model that is designed to be readable by the back-end. Then, the front end makes an AJAX POST request, sending that information as JSON to the back-end API. The data is stored by Mongo and (by now) the front end should have finished asynchronously rendering a view with the new information.
 ```
 
 
@@ -97,12 +97,8 @@ var Panda = function(name, age) {
 
 Your Answer:
 ```js
-var Panda = function(name, age) {
-  var self = this;
-  this.name = name;
-  this.age = age;
-  this.num_bamboo_eaten = 0;
-  this.eat_bamboo = function(){
+Panda.prototype = {
+  eat_bamboo: function(){
     this.num_bamboo_eaten = this.num_bamboo_eaten + 1
   }
 }
