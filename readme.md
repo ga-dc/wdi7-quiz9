@@ -18,6 +18,11 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 Your Answer:
 ```js
 
+var url='http://kittengifs.com/gifs'
+$.getJSON(url,function(data){
+  console.log(data.length);
+});
+
 ```
 
 ### Question #2
@@ -26,6 +31,8 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
+
+We take the body of our form, parse it into a JSON object, then submit an AJAX post, put, or patch request to the appropriate restful route, which is configured to accept JSON, including our form data as the data, and application/json as the type.
 
 ```
 
@@ -38,6 +45,8 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
+
+SQL is a relational database. A NoSQL DB is non-relational. You might use an SQL database when relations are important in the domain you're working in, or if you need to implement a many-to-many relationship. You might use NoSQL if you've got one model in your domain, which needs to hold a large amount of data nested within it.
 
 ```
 
@@ -54,7 +63,7 @@ console.log(results);
 
 Your Answer:
 ```text
-
+This mongoose method is going to return a promise, so we need to append a callback function to it and log the result from there.
 ```
 
 ## Front-end OOJS
@@ -65,6 +74,8 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
+
+Views create templates and fill those templates with data from the...Models, which retrieve and manipulate data about the given model, like a Profile or Artist, using methods like fetch.
 
 ```
 
@@ -83,6 +94,10 @@ var Panda = function(name, age) {
 Your Answer:
 ```text
 
+Panda.prototype.eat_bamboo=function(){
+  this.num_bamboo_eaten++;
+};
+
 ```
 
 
@@ -95,6 +110,8 @@ How is the concept of OAuth related to a valet key?
 Your Answer:
 ```text
 
+You're giving a third party limited access to a resource that is very valuable to you. It allows them to do what you want them to do, but forbids them from abusing their power and driving off with your ferrari like that valet from ferriss bueller.
+
 ```
 
 
@@ -105,6 +122,10 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+
+@media(max-width:40rem){
+  transform: translate3d(10px,0,0);
+}
 
 ```
 
@@ -117,6 +138,8 @@ How is rebase different than a merge?
 Your Answer:
 ```text
 
+Whereas merging merges the branch to be merged into the branch you're working in, Rebase leaves intact the other branch, and just incorporates its changes into the branch you're working on.
+
 ```
 
 ### Question #10
@@ -124,5 +147,8 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+
+Adding team members as collaborators. They fork a central repo, have both origin and upstream remotes. They pull changes from upstream, push changes to origin (their fork), then make pull requests from their fork to the central repo.
+Fetching, rebasing, merge conflicts, git diff'ing...
 
 ```
