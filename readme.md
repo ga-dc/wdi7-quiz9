@@ -17,7 +17,15 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+$.ajax({
+  url: http://kittengifs.com/gifs,
+  type: "get",
+  dataType: "json"
+}).done(function(response){
+  console.log(response.length);
+}).fail(function(){
+  console.log("Ajax request failed");
+});
 ```
 
 ### Question #2
@@ -38,7 +46,7 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
-
+SQL databases use tables to store information while NoSQL databases use objects stored in collections. SQL databases are more structured and are more efficient at processing many-to-many relationships while NoSQL is flexible and faster at processing one-to-many relationships.
 ```
 
 
@@ -65,7 +73,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+Model files for the front-end are used to fetch the information for that particular model from the backend while the views take that information and present it on the page for the user.
 ```
 
 ### Question #6
@@ -82,7 +90,9 @@ var Panda = function(name, age) {
 
 Your Answer:
 ```text
-
+Panda.prototype.eat_bamboo = function() {
+  return this.num_bamboo_eaten += 1;
+}
 ```
 
 
@@ -94,7 +104,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+OAuth allows users to share only the information they want to share without putting their password/security at great risk. Similar to how a valet key can start the car but can not open the glovebox.
 ```
 
 
@@ -105,7 +115,15 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+body {
+  background-color: white;
+}
 
+@media (max-width: 40rem) {
+  body {
+    background-color: yellow;
+  }
+}
 ```
 
 ## Git
@@ -116,7 +134,7 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+Rebase re-writes the commit history as a linear progression of commits while merge only brings together the two most recent commits of the respective branches.
 ```
 
 ### Question #10
@@ -124,5 +142,7 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+pull requests allow the developer to request that their changes to another branch (typically the master branch, or a different repo) be merged together. The request makes sure that the core developer(s) can look at these changes and decide if they want to integrate it into the code or not.
 
+forks allow users to create their own copy of a repo so they can make changes to the code with the intent of doing a pull request to the original repo.
 ```
