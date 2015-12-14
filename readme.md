@@ -25,7 +25,7 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```In brief, jQuery includes the javascript commands necessary to capture html or radio selections from the DOM and communicates this to the backend generating an asynchronous response that is ideally seamless to the user.
 
 ```
 
@@ -37,7 +37,9 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
+```SQL databases efficiently interpret large, strictly structured data tables that are built upon established relationships of two or more given elements. SQL databases connect specific sets of defined data, due to their rigid schemas they are most useful at structuring large pools of predictable data.
+
+NoSQL databases better serve related data types that do not share all of the same attributes. NoSQL is a developers best choice if one is dealing with diverse arrays of objects that through the magic of NoSQL, can be queried through a loose search across an entire document vs SQL's dependence on a structured examination of rigid data channels.
 
 ```
 
@@ -53,7 +55,7 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```var results = Author.name.find({"Bob"});
 
 ```
 
@@ -64,7 +66,7 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```Front End JavaScript models are the structure that define a given data set. Front End JS views get closer to structuring the DOM's actual layout of the selected data models.
 
 ```
 
@@ -81,7 +83,8 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```var eat_bamboo = function(){
+      this.num_bamboo_eaten += [i]
 
 ```
 
@@ -93,7 +96,7 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
+```OAuth relates to a valet in that a valet only holds your car key with your consent, and only for that moment you are using the valet. Just like the valet doesn't copy your key, OAuth doesn't record your plain text password.
 
 ```
 
@@ -104,7 +107,9 @@ Your Answer:
 
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
-```css
+```body{
+    @media (max-width: 40rem) background: green;
+}
 
 ```
 
@@ -115,7 +120,7 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
+```rebase smoothes out past commit tracks but this can be dangerous because it removes access to past versions.
 
 ```
 
@@ -123,6 +128,12 @@ Your Answer:
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
+```git pull
+git Push
+git merge
+head reset
+git branch
+checkout branch
+
 
 ```
