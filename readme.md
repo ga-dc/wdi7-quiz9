@@ -18,6 +18,19 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 Your Answer:
 ```js
 
+$(document).ready(function(){
+  // ajax get
+  $(".test_ajax_get").on("click", function(){
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: "http://kittengifs.com/gifs"
+    }).done(function(response) {
+      console.log(response.length)
+    }).fail(function(response){
+      console.log("ajax get request failed")
+    })
+  })
 ```
 
 ### Question #2
@@ -25,7 +38,23 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```  
+$(".test_ajax_post").on("click", function(){
+    var name = $(".name").val()
+    var photoUrl = $(".photo_url").val()
+    var nationality = $(".nationality").val()
+    $.ajax({
+      type: 'POST',
+      data: {artist: {photo_url: photoUrl, name: name, nationality: nationality}},
+      dataType: 'json',
+      url: "http://localhost:3000/artists"
+    }).done(function(response) {
+      console.log(response)
+      $("ul.articles").append("<li><a href='/artists/" + response.id + "'>" + response.name + "</a></li>")
+    }).fail(function(response){
+      console.log("ajax post request failed")
+    })
+  })
 
 ```
 
@@ -37,8 +66,7 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
-
+```SQL is for relational NoSQL is for non-relational
 ```
 
 
@@ -53,7 +81,7 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```I think you just need '.findById'
 
 ```
 
@@ -64,7 +92,11 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```
+Models hold the constructor function and fetch from the database.
+
+Views hold the prototype function and create a user-friendly not crypted view of the json
+
 
 ```
 
@@ -81,9 +113,12 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
-
 ```
+var eat_bamboo = function () {
+  console.log('this.name' + ('num_bamboo_eaten' + ii'));
+};
+```
+//not sure at all
 
 
 ## OAuth
@@ -93,7 +128,9 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
+```
+
+"For most people, their car is one of their most valuable possessions, valued in tens of thousands of dollars.  They are convenient places to leave our other valuables like computers and clothing.  Yet we are sometimes required to give them to a parking attendant or valet whom we’ve not met before. A valet key solves the problem – it’s an access token with limited rights that can operate the vehicle but not grant access to the trunk or glove box."
 
 ```
 
@@ -104,7 +141,27 @@ Your Answer:
 
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
-```css
+```
+@media (max-width: 60em){
+  .column-6{
+    width: 100%;
+  }
+  .column-4{
+    width:83.33%;
+  }
+}
+@media (max-width: 40em){
+  .header > .column-2,
+  .column-4{
+    width:100%;
+  }
+}
+@media (max-width: 30em){
+  .column-2,
+  .column-8{
+    width:100%;
+  }
+}
 
 ```
 
@@ -115,7 +172,7 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
+```rebase is when you switch out the master for a new master branch
 
 ```
 
@@ -123,6 +180,7 @@ Your Answer:
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
+```
+Fork, clone, git add ., git commit, git push origin 'branchname', submit pull request, merge, git pull upstream master.
 
 ```
