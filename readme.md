@@ -104,15 +104,11 @@ Your Answer:
 
 // I'm kind of confused on this one and ran out of time!!  Will think about it and would like to go over
 
-var Panda = function(name, age) {
-  this.name = name;
-  this.age = age;
-  this.num_bamboo_eaten = 0;
-  this.eat_bamboo =
-}
-var eat_babmoo = function(){
-  this.num_bamboo_eaten = x + 1;
-}
+Panda.prototype = {
+  eat_babmoo: function(){
+    this.num_bamboo_eaten +1;
+  }
+};
 ```
 
 
