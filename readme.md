@@ -84,10 +84,7 @@ var Panda = function(name, age) {
 Your Answer:
 ```text
 eat_bamboo = function (num_bamboo_eaten)
-  this.Panda.push(num_bamboo_eaten)
-for (var i = 0; i < this.num_bamboo_eaten; i++){
-  var P = response.Search[i];
-  Panda.eat_bamboo
+  for (var i = 0; i < this.num_bamboo_eaten; i++){
 ```
 
 
