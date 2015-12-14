@@ -19,6 +19,15 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
+$.ajax({
+  type:'POST',
+  url:http://kittengifs.com/gifs,
+  dataType: 'JSON',
+  success = function(data)
+    console.log(data.length);
+
+^.length to return all objects you get back?
+})
 
 ```
 
@@ -28,7 +37,9 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-
+We use the 'post' method to submit data to be processed to a specific end-point. The general structure is
+$.post(URL, data, callback);
+The url specifies the url you want to request, the data parameter specifies some data you want to send along with the request, and the callback parameter is the name of a function that should be executed if the request is successful.
 ```
 
 
@@ -40,7 +51,9 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
+The SQL database we worked with was PostgresQL. A SQL database uses rows and columns to store information about specific entities, and all data is sorted in its own row and columns. Each record conforms to a fixed schema, so the parameters of the rows and columns must be set in stone beforehand.
 
+The NoSql database we worked with, MongoDB, was a little more flexible. We would create and change our schema (which  determined the data in our DB) as our project evolved.<this actually was a blessing>NoSql operates on key based values stores, which means that its possible to group together collections of data (<i am trying to incorporate JSON objects into this answer, because that seemed like a major difference as well)
 ```
 
 
@@ -55,8 +68,10 @@ console.log(results);
 ```
 
 Your Answer:
-```text
-
+```js
+var results = AuthorModel.findOne({name: "Bob") function(err, docs){
+  console.log(results.docs);
+}}
 ```
 
 ## Front-end OOJS
@@ -67,7 +82,9 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-FE = front end Javascript
+Models - responsible for representing our data in a structured way, and provide an interface to interact with that data and the server. This is to separate concerns.
+
+Views - Views render our models into HTML (we have been using hbs) and respond to click events. Views connect our models with our user interface.
 ```
 
 ### Question #6
@@ -83,9 +100,18 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
-var eat_babmoo = function(){
+```js
 
+// I'm kind of confused on this one and ran out of time!!  Will think about it and would like to go over
+
+var Panda = function(name, age) {
+  this.name = name;
+  this.age = age;
+  this.num_bamboo_eaten = 0;
+  this.eat_bamboo =
+}
+var eat_babmoo = function(){
+  this.num_bamboo_eaten = x + 1;
 }
 ```
 
