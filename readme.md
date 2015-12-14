@@ -78,7 +78,9 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-Front-end JS does not necessarily require dedicated views or models, since the concatenation of .js files on the client-side means they are all sewn together into one. So an entire front-end *can* be built in one big file. However, it's good practice for purposes of separation of concerns and future readability and extensibility to abstract distinct functions out into their own .js files, and since the model-view-controller structure is the preferred pattern for most web development,
+Models and views on the front end allow developers to essentially abstract a single app into two entirely separate ones, a back-end that provides an API and a front-end that calls it the same way an app would call another developer's from across the Internet. Because this allows the front-end to exist entirely in the client's browser, sites can become super fast and responsive because AJAX can eliminate the need for page refreshes and front-end rendering means that much of what needs to be loaded when the user clicks already has been, and it's only the data that needs to be pulled across the Internet from the back-end.
+
+Front-end JS does not necessarily require dedicated views or models, since the concatenation of .js files on the client-side means they are all sewn together into one. So an entire front-end *can* be built in one big file. However, it's good practice for purposes of separation of concerns and future readability and extensibility to abstract distinct functions out into their own .js files.
 ```
 
 ### Question #6
@@ -94,8 +96,16 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
-
+```js
+var Panda = function(name, age) {
+  var self = this;
+  this.name = name;
+  this.age = age;
+  this.num_bamboo_eaten = 0;
+  this.eat_bamboo = function(){
+    this.num_bamboo_eaten = this.num_bamboo_eaten + 1
+  }
+}
 ```
 
 
@@ -107,7 +117,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+OAuth allows a third-party service to perform user authentication via tokens sent back and forth between the app and an OAuth provider like Twitter or Facebook. Like a valet key, these tokens are handed off to allow the OAuth provider to ensure the user request sent through the app is genuine, and to allow the app to ensure the response from the OAuth provider is genuine.
 ```
 
 
