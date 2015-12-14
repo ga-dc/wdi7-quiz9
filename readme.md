@@ -16,7 +16,8 @@ the square brackets (for multiple-choice questions).
 Using jQuery, write code that makes an AJAX get request to "http://kittengifs.com/gifs". Output to the console the total number of results you get back. (Assume the server responds with a JSON array of objects representing gifs.)
 
 Your Answer:
-```js
+```
+$.get("http://www.kittengifs.com/gifs")
 
 ```
 
@@ -25,7 +26,11 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```
+To submit a form using AJAX, we need to
+1. capture the form submit button
+2. get all the data from the form using jQuery
+3.Submit using AJAX (we can use the $.post() method)
 
 ```
 
@@ -37,7 +42,11 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
+```
+SQL: Has relational databases
+NoSQL: Non-relational. Uses collections. No schema is required.
+
+NoSQL generally processes data faster than SQL. SQL are best fit for heavy duty transactional type of applications.
 
 ```
 
@@ -64,7 +73,10 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```
+Models represent the domain-specific knowledge and data in an application.
+
+Views are typical considered the User-interface in an application.
 
 ```
 
@@ -81,7 +93,10 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```
+var eat_bamboo = function(){
+
+}
 
 ```
 
@@ -93,7 +108,8 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
+```
+An OAuth token gives one app access to one API on behalf of one user.
 
 ```
 
@@ -115,7 +131,8 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
+```
+Git rebase rewrites the project history by creating brand new commits for each commit in the original branch.
 
 ```
 
@@ -123,6 +140,13 @@ Your Answer:
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
+```
+git merge
+git rebase
+git pull
+git push
+git clone
+git stash
+
 
 ```
