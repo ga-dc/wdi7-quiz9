@@ -17,7 +17,17 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+@.ajax({
+  type: 'GET',
+  dataType: 'json',
+  url: http://kittengifs.com/gifs,
+}).done(function(response){
+  var count = 0;
+  for (var i=0; i<response.length; i++) {
+    count = count+1;
+  }
+  console.log(count);
+});
 ```
 
 ### Question #2
@@ -26,6 +36,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
+jQuery allows us to select elements on a page and adjust/extract the values there. In this case, we would use jQuery to extract the form value from the page, and use that value in our AJAX call parameters.
 
 ```
 
@@ -38,7 +49,11 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
+SQL (Structured Query Language) and NoSQL are two different database structures for storing, accessing, and adjusting data. SQL is typically more rigid in terms of matching data types and schemas, while NoSQL has somewhat less structure. SQL uses tables, and is more akin to your typical excel spreadsheet experience. NoSQL uses documents which look and feel more like objects in programming, or specifically JSON objects.
 
+SQL is good for many to many relationships, and keeping track of foreign keys.
+
+NoSQL can work well if you aren't sure what the end product/databse needs to look like, as there is a bit more leeway in terms of data structures. 
 ```
 
 
