@@ -24,11 +24,13 @@ console.log(results)
 
 ### Question #2
 
-Describe at a high level how we use jQuery to submit a form via AJAX.
+Describe at a high level how we use jQuery to submit a form via
+AJAX.
 
 Your Answer:
 ```text
-jQuery makes a request to AJAX and uses the routers and controllers to push the from to AJAX.
+jQuery makes a request to AJAX and uses the routers and controllers
+to push the form to AJAX.
 ```
 
 
