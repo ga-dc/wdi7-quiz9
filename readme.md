@@ -16,7 +16,12 @@ the square brackets (for multiple-choice questions).
 Using jQuery, write code that makes an AJAX get request to "http://kittengifs.com/gifs". Output to the console the total number of results you get back. (Assume the server responds with a JSON array of objects representing gifs.)
 
 Your Answer:
-```js
+```$.ajax({
+  url: http://kittengifs.com/gifs,
+  data: [],
+  success: success,
+  dataType: JSON
+});
 
 ```
 
@@ -25,7 +30,7 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```When we use jQuery to submit a form via AJAX it has some advantages. Such as we can process the form without having to refresh the page. It is very useful in single paged apps. We can run both Client and Server validation. Show errors if there are any. Also showing success if a form is submitted correctly. All from one page with out reload.
 
 ```
 
@@ -37,7 +42,9 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
+```SQL we have a schema, but in order to manipulate that schema we have to re-seed our data to
+  update the database where with a NoSQL DB like mongoose we are able manipulate it directly and update
+  without having to reseed.
 
 ```
 
@@ -53,7 +60,7 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```
 
 ```
 
@@ -64,7 +71,7 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```The views and models are what are rendered by JS on the site. We build our models in views in js and than reference them on what part of our index we want them to show up. We often use this for layout and forms of our application.
 
 ```
 
@@ -81,7 +88,7 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```
 
 ```
 
@@ -93,7 +100,9 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
+```They are convenient places to leave our other valuables like computers and clothing.  Yet we are sometimes required to give them to a parking attendant or valet whom we’ve not met before. A valet key solves the problem – it’s an access token with limited rights that can operate the vehicle but not grant access to the trunk or glove box.
+
+If Jerry visits a site, which uses a service provided by Twitter. This site is using it's OAuth credentials to begin the authentication process. The site then redirects to Twitter to login. The site never sees Bob's Twitter password. The page asks if it has access to Twitter so the application can be utilized. If the sign in is successful the site will uses its own OAuth token to retrieve those credentials The site then stores Bob's credentials along with the account.
 
 ```
 
@@ -104,7 +113,7 @@ Your Answer:
 
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
-```css
+```
 
 ```
 
@@ -115,7 +124,7 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
+```Rebasing re-writes the project history by creating brand new commits for each commit in the original branch. When you do a git merge, the result of the merged branches is placed on your current branch. The result of the merge is a new commit on the current branch.
 
 ```
 
@@ -123,6 +132,15 @@ Your Answer:
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
+```When we fork a project we are copying all files and putting them into our own git profile, and create our own repo. From there we can change code as we see fit. We can create other branches to work on. It is basically our own copy.
+Though the changes we make do not effect the original project. When we fork the project we then have to clone it to
+our hard drive so that we can access it in our code editor. Once the clone is made our changes can be committed to our
+repo on git hub.
+
+If we want our changes to be made to the original project we can then submit a pull request to ask the original project owner to apply those changes the their original code. If the Owner accepts the changes then they will be pushed into the
+the original project.
+
+When working in groups there are often several different branches that developers will be working on. Unless the branch is on the original project repo. Developers will often have to pull upstream to get the most up to date version of the repo.
+This ensures that the changes being made are not breaking original code.
 
 ```
