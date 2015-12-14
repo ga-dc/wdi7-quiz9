@@ -16,7 +16,12 @@ the square brackets (for multiple-choice questions).
 Using jQuery, write code that makes an AJAX get request to "http://kittengifs.com/gifs". Output to the console the total number of results you get back. (Assume the server responds with a JSON array of objects representing gifs.)
 
 Your Answer:
-```js
+```$.ajax({
+  url: http://kittengifs.com/gifs,
+  data: String,
+  success: null,
+  dataType: String
+});
 
 ```
 
@@ -25,7 +30,7 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```Jquery uses a serialize method to get form data and then uses Ajax methods to send data back to the back-end.
 
 ```
 
@@ -37,7 +42,10 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
+```SQL databases are called Relational Databases and NoSQL database are called  non-relational or distributed databases.
+This means that SQL databases represent data in form of tables which consists of a number of rows of data whereas NoSQL databases are the collection of key-value pairs, documents, and/or graph databases.
+SQL databases have predefined schema whereas NoSQL databases have dynamic schema for unstructured data.
+You might choose to use the SQL vs NoSQL depending on the type of data being stored, SQL databases are not best fit for hierarchical data storage. But, NoSQL database fits better for the hierarchical data storage as it follows the key-value pair way of storing data similar to JSON data. NoSQL database are highly preferred for large data set
 
 ```
 
@@ -53,7 +61,7 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```Because there is no arthur model defined in the code.
 
 ```
 
@@ -64,7 +72,7 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```The purpose of views and models in Front-end Javascript is to connect to the controller and share stored data with the controller when requested.
 
 ```
 
@@ -81,7 +89,12 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```
+var Panda = function(name, age) {
+this.name = eat_bamboo;
+    this.age = age;
+    this.num_bamboo_eaten = 1;
+  }
 
 ```
 
