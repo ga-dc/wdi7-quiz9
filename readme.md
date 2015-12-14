@@ -18,6 +18,21 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 Your Answer:
 ```js
 
+Kitten.fetch = function(){
+  var url = "/kittens"
+  $.ajax({
+    url: url,
+    type: "GET",
+    dataType: "json"
+  }).done ( function(response){
+    console.log(response.Kittens.length);
+  }).fail ( function (){
+    console.log("Failure");
+  }).always( function(){
+    console.log("Something's happening");
+  })
+};
+
 ```
 
 ### Question #2
@@ -25,7 +40,9 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```
+jQuery allows us to easily manipulate AJAX responses to return data in JSON format (or other formats).
+It also helps us easily find the values submitted through a form, and add into the given AJAX call.  
 
 ```
 
@@ -37,8 +54,8 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
-
+```
+A SQL DB is a RELATIONAL db, while noSQL is NON-RELATIONAL.  It would be best to use a SQL db over NoSQL when you have complicated many-to-many relationships between your different models.  NoSQL dbs are useful when you have more straight forward one-many relationships, as it is faster, and can be easier to manipulate.
 ```
 
 
@@ -53,7 +70,9 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```
+I believe that code does not actually return anything because there is no promise attached to it after the find.  Once you find the results, there needs to be a ".then" that actually returns the information.
+In addition to that, if there are more than 1 "Bob"'s, it would not know which one you want to specify
 
 ```
 
@@ -64,7 +83,8 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```
+Views and models in FE JS are mainly a "separation of concerns" situation.  Models are where I would add AJAX calls to populate the FE with data.  Views are where I would plan to actually build my page on the HTML and then provide the viewing source for that models' AJAX call.
 
 ```
 
@@ -81,7 +101,14 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
+```
+Panda.prototype = {
+  eat_bamboo: function(){
+    var self = this;
+    self.num_bamboo_eaten = self.num_bamboo_eaten + 1;
+    return self.num_bamboo_eaten
+  }
+}
 
 ```
 
@@ -93,7 +120,11 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
+```
+***If I'm understanding this question right:
+A valet key is essentially a key that a driver would give to a valet that allows that valet to drive and park the car, but restricts access to things like the trunk, or glove compartments.
+
+OAuth can be though of in a fairly similar sense.  When a user signs up to a web app through OAuth, entering their password, OAuth provides the web app with an encrypted version of that password.  All that it allows the web app to do is check to see if that encryption matches each time the given user logs in.  It does not provide the actual password to the web app, so that it adds some security and the password is not just out there in the open.
 
 ```
 
@@ -104,7 +135,12 @@ Your Answer:
 
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
-```css
+```
+@media (max-width: 40rem){
+  body{
+    background: green;
+  }
+}
 
 ```
 
@@ -115,7 +151,11 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
+```
+Merging happens when you have two separate branches (ex. master and feature), and they are combined into a new commit on the master branch. From there, merge conflicts are dealt with before proceeding further.
+
+Rebase actually goes back to the most recent commit that the two branches have in common, and then builds the combination from there. This is essentially a means by which you can keep your commits all on the same timeline, instead of having branches that end at various points in time.
+Rebasing merges one commit at a time, so it can at times be easier to work through conflicts.
 
 ```
 
@@ -123,6 +163,12 @@ Your Answer:
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
+```
+git clone allows team members to clone down and contribute to the same repo.
+git checkout -b <branch name> creates a new branch and switches the developer to that new branch to work on a new feature.
+pull requests can be used so that one team member in charge of the master can review any merges from other branches and then accept or reject them through github.
+forking creates a separate repo for a team member to work on.  It makes a new master branch.  However, that team member can still create pull requests back to the original that the original master branch can accept.
+git diff shows the differences between two branches to better parse through a merge request
+
 
 ```
