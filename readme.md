@@ -17,7 +17,20 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+$(document).ready(function(){
+  $(".load-kitten-gifs-button").on("click", function(){
+    var url = "http://kittengifs.com/gifs"
+    $.ajax({
+      url: url,
+      type: "get",
+      dataType: "json"
+    }).done(function(response){
+      console.log("Purrrrr... " + response.length + " kitten gifs loaded.")
+    }).fail(function(){
+      console.log("MRRRREEEOOOOWWW! Could not load kitten gifs!!")
+    })
+  })
+})
 ```
 
 ### Question #2
