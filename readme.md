@@ -151,5 +151,5 @@ A merge rejoins two branches at a new commit point. A rebase merges the entire c
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
-
+A centralized workflow is one in which team members work on forks of a single master branch and integrate forks via pull requests. This can be less complex but it also a less robust form of team version control--best practices dictate a feature branch workflow, in which teams work on a single repo but checkout to a series of feature branches denoting different aspects of the app they are working on.
 ```
