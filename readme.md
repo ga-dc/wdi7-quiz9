@@ -51,7 +51,7 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
-
+A SQL database is a database structured as a table or spreadsheet, while a NoSQL database is a collection of objects with no such inherent structure to it. A SQL database would be a better choice for storing data that mostly have similar attributes, because its structure allows values to be retrieved faster. But if the values have dissimilar attributes, a SQL database will expand the 'table' to include lots of unnecessary empty 'cells', so to speak, so a NoSQL database is a better choice in this instance.
 ```
 
 
@@ -78,7 +78,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+Front-end JS does not necessarily require dedicated views or models, since the concatenation of .js files on the client-side means they are all sewn together into one. So an entire front-end *can* be built in one big file. However, it's good practice for purposes of separation of concerns and future readability and extensibility to abstract distinct functions out into their own .js files, and since the model-view-controller structure is the preferred pattern for most web development,
 ```
 
 ### Question #6
@@ -118,7 +118,15 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+body {
+  background-color: lemonchiffon;
+}
 
+@media (max-width: 40rem) {
+  body {
+    background-color: chucknorris;
+  }
+}
 ```
 
 ## Git
@@ -129,7 +137,7 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+A merge rejoins two branches at a new commit point. A rebase merges the entire commit history of a branch into the commit history of another branch, erasing them as distinct branches and rewriting them with a new shared history. Rebases allow for cleaner commit histories in the sense that the tangle of branches can be reduced, but they are dangerous because they result in the erasure of old, saved code.
 ```
 
 ### Question #10
