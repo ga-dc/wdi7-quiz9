@@ -15,6 +15,8 @@ the square brackets (for multiple-choice questions).
 
 Using jQuery, write code that makes an AJAX get request to "http://kittengifs.com/gifs". Output to the console the total number of results you get back. (Assume the server responds with a JSON array of objects representing gifs.)
 
+
+
 Your Answer:
 ```js
 
@@ -65,7 +67,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+FE = front end Javascript
 ```
 
 ### Question #6
@@ -82,7 +84,9 @@ var Panda = function(name, age) {
 
 Your Answer:
 ```text
+var eat_babmoo = function(){
 
+}
 ```
 
 
@@ -94,7 +98,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+OAuth is the standard way for apps to handle authentication. It allows users to grant 3rd party access to their personal information *without* actually giving the app their passwords. This relates to a valet key in the sense that a valet key lets a valet person operate a car, but restricts access to the trunk, gas tank, and glove compartment where there is sensitive information about the car and owner.
 ```
 
 
@@ -105,7 +109,12 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
-
+@media(max-width: 40rem){
+  body{
+    background-color: yellow;
+    width: 30%;
+  }
+  ^^kind of tempted to write 39rem to ensure i'm interpreting the question right? Also never heard of rem - cool!
 ```
 
 ## Git
@@ -116,7 +125,7 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+Both git Merge and git Rebase integrate changes from one branch into another, but they do it in different ways. Merging is referred to as the "non-descrtuvctive" option because when you merge two branches (say featureBranch with master) you can see the the commit history of both branches by running 'git log'. Rebasing is different, because when you would merge these two branches it pushes the feature branch on top of the master, re-writing the project history by making new commits for each commit in the master branch.
 ```
 
 ### Question #10
@@ -124,5 +133,11 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+Here is how my team worked during project week.
 
+1 Person owned a repo on github and added the other members as collaborators.
+
+We have one main branch called Master which was uploaded with a generic outline of our project.
+
+The other team members would use the command "git pull origin master" to pull own the latest version of that master branch. They would make updates (either in master or another brancs), push those updates up to our repo, and if they were working in 'master' those updates were automatically inserted into our app. If they made changes in another branch, you would use the same command (git push origin otherBranch) and merge those changes with the master branch using a GitHub pull request. If there were Merge conflicts we would resolve these through the command line and Atom.
 ```
