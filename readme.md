@@ -17,7 +17,9 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+$.ajax({url: "http://kittengifs.com/gifs", success: function(response){
+  console.log($(response).length)
+});
 ```
 
 ### Question #2
@@ -26,7 +28,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-
+We specify a URL as the first parameter and an object at the second.
 ```
 
 
@@ -38,7 +40,7 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
-
+SQL databases provide a store of related data tables, using a very rigid/fixed format. No SQL databases store JSON values and is much more forgiving/flexible with the inputs of data.
 ```
 
 
@@ -54,7 +56,8 @@ console.log(results);
 
 Your Answer:
 ```text
-
+var results = mongoose.AuthorModel.find({name: "Bob"});
+  console.log(results.name);
 ```
 
 ## Front-end OOJS
@@ -65,7 +68,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+Views are how the data is displayed and positioned on the page (ie, JS that makes an image change on mouse hover). Models are how the data is rendered/pulled from the back-end.
 ```
 
 ### Question #6
@@ -82,7 +85,9 @@ var Panda = function(name, age) {
 
 Your Answer:
 ```text
-
+var eat_bamboo = function(num_bamboo_eaten) {
+  eat_bamboo = i++
+}
 ```
 
 
@@ -94,7 +99,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+OAuth is an authentication method that allows users to approve application actions on their behalf, just like a driver hands over his key to a valet driver to allow said valet to drive the owner's car on his behalf. However, that driver might want to just hand over a valet key, instead of his full key set, in order to give the valet only specific control, just like OAuth.
 ```
 
 
@@ -105,7 +110,11 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
-
+@media (max-width: 40rem){
+  body{
+    font-family: avenir;
+  }
+}
 ```
 
 ## Git
@@ -116,7 +125,7 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+Both git rebase and git merge solve the same problem-- they integrate changes from one branch to another. However, rebasing rewrites the history by creating new commits for each existing commit in the original branch. The result is a much cleaner workflow.
 ```
 
 ### Question #10
@@ -124,5 +133,5 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
-
+Forking gives multiple developers a server-side repository to work on. Pull requests provide an interface to evaluate proposed changes before integrating. Cloning creates an exact but local replica of a given repository on a user's machine. Branches are individual development flows that can later be merged together. They are useful if multiple developers are working on a single project, or if a user wants multiple branches to keep a complex project clean.
 ```
