@@ -18,6 +18,13 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 Your Answer:
 ```js
 
+var url = "http://kittengifs.com/gifs";
+var request = $.getJSON(url).then(function(res){
+ 	console.log(res.length):
+}).fail(function(res){
+console.log(“failed to get kitten gifs”);
+});
+
 ```
 
 ### Question #2
@@ -26,7 +33,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-
+ We need to capture the values of the form using jQuery and the .val() method. For example if the form included an input tag for a person's firstname with a class of "firstname", we could use $(“.firstname”).val() which will grab that value. After we use jQuery to grab all of the input values we need, we then send a AJAX Post request to our server with those values passed in as an object under data key value pair. We then can pass in promises, which are callback functions that may or may not happen as a result of the ajax request. If it is successful, it will execute the .done promises in which we can pass in a response as an argument to that callback, or a .fail if the ajax request is unsucessful.
 ```
 
 
@@ -38,7 +45,7 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
-
+SQL databases are relational, and include lists of related tables. NoSQL databases store JSON like documents with key value pairs. In SQL, you must create a schema, adding tables and field types before adding any data and overall can be considered more rigid. On the other hand with NoSQL, the structure and schemas can be more flexible and more easily manipulated. I would choose SQL over NoSQL for more complex associations with a lot of models. However, If that was irrevelant to my domain, and I needed a fast, high preforming database for what I was trying to achieve, I would choose NoSQL.
 ```
 
 
@@ -50,11 +57,12 @@ What's wrong with this mongoose code and how might we fix it?
 ```js
 var results = AuthorModel.find({name: "Bob"});
 console.log(results);
+
 ```
 
 Your Answer:
 ```text
-
+There are several reasons for the incorrect results. First, we are using .find versus .findOne method in mongoose, .find will return an array of documents, where as .findOne will return a single document. Additionally, we need a callback function in order to grab the results of the mongoose method.
 ```
 
 ## Front-end OOJS
@@ -65,7 +73,7 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
-
+In front end Javascript, typically our views could be condensed into a single index.html document that would contain the basic html structure for our application, and then use Javascript to dynamically add additional html and change the format. We might create a views directory with separate files for our models to stay organized and good practice, but isn't necessary. We could then create functions on files in the views directory that dynamically created html. Furthermore, the models in front-end JS, might typically contain Object constructor or prototpye functions that allow us to model documents or objects of our database on the front end.  
 ```
 
 ### Question #6
@@ -94,7 +102,7 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-
+ OAuth is a security protocol that allows users to grant third party access to their web resources without sharing their passwords. It delegates authentication between applications using an access token. It is related to a valet key, in that the valuet driver is similar to the access token, sharing limited rights that can use the vehicle but not further operate?
 ```
 
 
@@ -105,6 +113,14 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+body{
+  background-color: red;
+}
+@media(max-width: 40rem){
+  body{
+    background: green;
+  }
+}
 
 ```
 
@@ -116,7 +132,7 @@ How is rebase different than a merge?
 
 Your Answer:
 ```text
-
+ Rebase is different than a merge, in that instead of merging the data through one commit, it combines the two branches themselves, and can help with cleaning and organizing a project's git history. When you rebase, you are disregarding your old commits and replacing them with new commits.
 ```
 
 ### Question #10
@@ -124,5 +140,5 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
-
+One workflow is the centralized workflow, where there is one remote repo branch designated as a master and all team members will clone this master onto their local machines, and will pull and push directly from/onto that single repo. Another common workflow is the feature branch workflow, where team members will fork and clone a copy of the master repo and will push branches and changes to their forked copy, then submit a pull requests to the master repo in order to merge changes.
 ```
