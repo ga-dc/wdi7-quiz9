@@ -21,13 +21,13 @@ $.ajax({
   url: "http://kittengifs.com/gifs",
   type: "GET",
   dataType: "json"
-}).done(function(){
-  console.log("Look at al your great kitten gifs!");
+}).done(function(response){
+  console.log(response.length);
 }).fail(function(){
   console.log("Aw man, no gifs this time?");
 }).always(function(){
   console.log("Meow!");
-})
+});
 ```
 
 ### Question #2
@@ -36,7 +36,7 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
-A post request is made using the jQuery method $.ajax and using the response that it retrieves to post data on the client-side to the API.
+A post request is made using the jQuery method $.ajax and using the response that it retrieves to post data on the client-side to the API. 
 ```
 
 
