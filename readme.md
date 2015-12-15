@@ -16,7 +16,8 @@ the square brackets (for multiple-choice questions).
 Using jQuery, write code that makes an AJAX get request to "http://kittengifs.com/gifs". Output to the console the total number of results you get back. (Assume the server responds with a JSON array of objects representing gifs.)
 
 Your Answer:
-```js
+```
+N/A
 
 ```
 
@@ -25,7 +26,7 @@ Your Answer:
 Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
-```text
+```We would use Promise Callbacks to submit a form via AJAX
 
 ```
 
@@ -37,7 +38,7 @@ Your Answer:
 Describe the differences between a SQL and NoSQL DB, and when you might use each.
 
 Your Answer:
-```text
+```SQL are table databases where data is represented with rows and columns.  SQL = MongoDB
 
 ```
 
@@ -53,7 +54,9 @@ console.log(results);
 ```
 
 Your Answer:
-```text
+```
+var results = authorModel.findBy({name: "Bob"});
+console.log(results);
 
 ```
 
@@ -64,7 +67,8 @@ Your Answer:
 Describe the purpose of views and models in FE JS.
 
 Your Answer:
-```text
+```
+I believe models hold information, while views hold the behavior of the pages. The view is part of the app where the users interact with.
 
 ```
 
@@ -81,8 +85,8 @@ var Panda = function(name, age) {
 ```
 
 Your Answer:
-```text
-
+```
+	N/A
 ```
 
 
@@ -93,8 +97,8 @@ Your Answer:
 How is the concept of OAuth related to a valet key?
 
 Your Answer:
-```text
-
+```
+	the valet key is another key within the browser when you log into/onto a website.  That's your special key when you log in. Its basically to keep a session on that website.
 ```
 
 
@@ -104,8 +108,8 @@ Your Answer:
 
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
-```css
-
+```
+	N/A
 ```
 
 ## Git
@@ -115,14 +119,14 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 How is rebase different than a merge?
 
 Your Answer:
-```text
-
+```
+	It seems as if merging is better because when you merge, you still have history of that branch.  But when you rebase, it overwrites and fully commits everything onto the master branch. The benefit of rebase is that it gives you a cleaner project history.
 ```
 
 ### Question #10
 
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
-```text
-
+```
+	fork, git clone, git push origin [branch], git pull, git merge, and merge conflicts. 
 ```
