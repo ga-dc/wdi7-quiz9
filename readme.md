@@ -17,7 +17,8 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
-
+        $.ajax( "http://kittengifs.com/gifs" [, options])
+        console.log(:json );
 ```
 
 ### Question #2
@@ -39,8 +40,10 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 Your Answer:
 ```text
 
-```
+SQL databases are primarily called as Relational Databases; whereas NoSQL database are primarily called as non-relational or distributed database.
 
+SQL databases are table based databases and NoSQL databases are document      based, key-value pairs, graph databases or wide-column stores. This means that SQL databases represent data in form of tables which consists of a number of rows of data whereas NoSQL databases are the collection of key-value pair, documents, graph databases or wide-column stores which do not have standard schema definitions which it needs to adhered to.
+```
 
 ### Question #4
 
@@ -51,7 +54,6 @@ What's wrong with this mongoose code and how might we fix it?
 var results = AuthorModel.find({name: "Bob"});
 console.log(results);
 ```
-
 Your Answer:
 ```text
 
@@ -65,6 +67,10 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
+
+Models in front end is a group of html elements which are bind to data.
+
+Views are the representation of   
 
 ```
 
@@ -106,6 +112,11 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 
 ```css
 
+@media screen and (min-width: 36em) and (max-width: 64em) {
+  .project-tagline {
+    font-size: 1.15rem; }
+  }
+
 ```
 
 ## Git
@@ -114,8 +125,12 @@ Write some basic CSS that demonstrates changing a CSS property when the device w
 
 How is rebase different than a merge?
 
+
 Your Answer:
 ```text
+Rebase reverts all commits since the current branch diverge from <upstream>, and then re-applies them one by one on top of changes from the HEAD of <upstream>.
+
+Merge changes from <branch name> into current branch.
 
 ```
 
@@ -124,5 +139,9 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+Fork creates an exact copy of any repo to my list of repositories.
+
+pull request incorporates changes from a remote repository into the current branch. In its default mode, git pull in shorthand for git fetch followed by git merge FETCH_HEAD.
+
 
 ```
