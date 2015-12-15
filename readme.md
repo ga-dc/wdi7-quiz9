@@ -123,7 +123,10 @@ How is the concept of OAuth related to a valet key?
 
 Your Answer:
 ```text
-Valet keys allow you to give someone the keys to your car without full access (e.g. they can't open the trunk or glovebox). Similarly, OAuth allows you to share your account on a 3rd party provider (e.g. Facebook, Twitter, Google), without given the consumer app your password, or necessarily full access to your account, such as reading / modifying  your data, posting on your behalf, etc.
+You want to use their valet service so you give them your key (app ID and app secret) and in exchange they take your car and give you something to identify which car is yours (access token). (thx AlexS)
+
+Also, valet keys allow you to give someone the keys to your car without full access (e.g. they can't open the trunk or glovebox). Similarly, OAuth allows you to share your account on a 3rd party provider (e.g. Facebook, Twitter, Google), without given the consumer app your password, or necessarily full access to your account, such as reading / modifying  your data, posting on your behalf, etc.
+
 ```
 
 
