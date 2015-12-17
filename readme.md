@@ -17,6 +17,13 @@ Using jQuery, write code that makes an AJAX get request to "http://kittengifs.co
 
 Your Answer:
 ```js
+$.getJSON({
+    url: "http://kittengifs.com/gifs"
+    method: "get"
+  })
+  .then(function(results){
+    console.log(results.length)
+  });
 
 ```
 
@@ -26,6 +33,8 @@ Describe at a high level how we use jQuery to submit a form via AJAX.
 
 Your Answer:
 ```text
+
+It lets us send a server side request without refreshing the page, no browser requests.
 
 ```
 
@@ -38,6 +47,8 @@ Describe the differences between a SQL and NoSQL DB, and when you might use each
 
 Your Answer:
 ```text
+
+SQL are generally for more complex databases because they're relational and have complex data models. No SQL are faster and used for smaller and less complex databases. Also there is no schema required in a NoSQL database.
 
 ```
 
@@ -55,6 +66,7 @@ console.log(results);
 Your Answer:
 ```text
 
+It needs a callback
 ```
 
 ## Front-end OOJS
@@ -65,6 +77,8 @@ Describe the purpose of views and models in FE JS.
 
 Your Answer:
 ```text
+
+You need both views and models so everything doesn't get extremely cluttered and you can make single page apps.
 
 ```
 
@@ -82,6 +96,9 @@ var Panda = function(name, age) {
 
 Your Answer:
 ```text
+Panda.prototype.eat_bamboo = function() {
+  this.num_bamboo_eaten = this.num_bamboo_eaten +1;
+}
 
 ```
 
@@ -95,6 +112,8 @@ How is the concept of OAuth related to a valet key?
 Your Answer:
 ```text
 
+OAuth gives someone a token essentially to use for that short period of time, but it's not really theirs. The same way a valet key works.
+
 ```
 
 
@@ -105,6 +124,12 @@ Your Answer:
 Write some basic CSS that demonstrates changing a CSS property when the device width drops below 40rem.
 
 ```css
+
+@media (max-width: 40rem) {
+  div{
+    color: white;
+  }
+}
 
 ```
 
@@ -117,6 +142,8 @@ How is rebase different than a merge?
 Your Answer:
 ```text
 
+Merges make new commits and rebase just overwrites them. Rebase changes the commit history of previous commits essentially.
+
 ```
 
 ### Question #10
@@ -124,5 +151,7 @@ Your Answer:
 Describe some of the common git workflows for teams (fork and pull request, etc).
 
 ```text
+
+Fork off of one person. Then everyone has their own version on their local machine after they clone it down. You can then push, pull, merge, etc. You can merge yourself if you're a contributor, which is what my group did. You can push to upstream as well or pull it down for any new changes you have.
 
 ```
