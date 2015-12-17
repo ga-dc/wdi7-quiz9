@@ -78,6 +78,8 @@ Describe the purpose of views and models in FE JS.
 Your Answer:
 ```text
 
+You need both views and models so everything doesn't get extremely cluttered and you can make single page apps.
+
 ```
 
 ### Question #6
@@ -110,7 +112,7 @@ How is the concept of OAuth related to a valet key?
 Your Answer:
 ```text
 
-I'm not really sure what this is asking me?
+OAuth gives someone a token essentially to use for that short period of time, but it's not really theirs. The same way a valet key works.
 
 ```
 
